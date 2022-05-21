@@ -1,6 +1,8 @@
-<img src="http://rawgit.com/caiogondim/bullet-train-oh-my-zsh-theme/master/img/icon.svg" width="100%" />
+<img src="./img/icon.svg" width="100%" />
 
-# Bullet Train for oh-my-zsh <a href="http://webchat.freenode.net/?channels=bullettrain-sh" target="_blank"><img src="https://img.shields.io/badge/IRC-bullettrain–sh-1e72ff.svg?style=flat" height="20"></a>
+# Bullet Train for oh-my-zsh
+## This is a fork with some minor modifications to match the theme to my personal preference
+
 
 Bullet Train is a [oh-my-zsh shell](https://github.com/robbyrussell/oh-my-zsh)
 theme based on the

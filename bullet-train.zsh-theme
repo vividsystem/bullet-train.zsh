@@ -1,24 +1,8 @@
-# README
-#
-# In order for this theme to render correctly, you will need a
-# [Powerline-patched font](https://github.com/Lokaltog/powerline-fonts).
-#
-# In addition, I recommend the
-# [Tomorrow Night theme](https://github.com/chriskempson/tomorrow-theme) and, if
-# you're using it on Mac OS X, [iTerm 2](http://www.iterm2.com/) over
-# Terminal.app - it has significantly better color fidelity.
-
-# ------------------------------------------------------------------------------
-# CONFIGURATION
-# The default configuration, that can be overwrite in your .zshrc file
-# ------------------------------------------------------------------------------
-
 VIRTUAL_ENV_DISABLE_PROMPT=true
 
-# Define order and content of prompt
 if [ ! -n "${BULLETTRAIN_PROMPT_ORDER+1}" ]; then
   BULLETTRAIN_PROMPT_ORDER=(
-    time
+    #time
     status
     custom
     context
@@ -27,7 +11,7 @@ if [ ! -n "${BULLETTRAIN_PROMPT_ORDER+1}" ]; then
     perl
     ruby
     virtualenv
-    nvm
+    #nvm
     aws
     go
     rust
@@ -40,7 +24,7 @@ fi
 
 # PROMPT
 if [ ! -n "${BULLETTRAIN_PROMPT_CHAR+1}" ]; then
-  BULLETTRAIN_PROMPT_CHAR="\$"
+  BULLETTRAIN_PROMPT_CHAR="⊙"
 fi
 if [ ! -n "${BULLETTRAIN_PROMPT_ROOT+1}" ]; then
   BULLETTRAIN_PROMPT_ROOT=true
@@ -57,10 +41,12 @@ if [ ! -n "${BULLETTRAIN_STATUS_EXIT_SHOW+1}" ]; then
   BULLETTRAIN_STATUS_EXIT_SHOW=false
 fi
 if [ ! -n "${BULLETTRAIN_STATUS_BG+1}" ]; then
-  BULLETTRAIN_STATUS_BG=green
+  BULLETTRAIN_STATUS_BG=color1
+  BULLETTRAIN_STATUS_FG=green
 fi
 if [ ! -n "${BULLETTRAIN_STATUS_ERROR_BG+1}" ]; then
-  BULLETTRAIN_STATUS_ERROR_BG=red
+  BULLETTRAIN_STATUS_ERROR_FG=red
+  BULLETTRAIN_STATUS_ERROR_BG=color1
 fi
 if [ ! -n "${BULLETTRAIN_STATUS_FG+1}" ]; then
   BULLETTRAIN_STATUS_FG=white
@@ -68,10 +54,10 @@ fi
 
 # TIME
 if [ ! -n "${BULLETTRAIN_TIME_BG+1}" ]; then
-  BULLETTRAIN_TIME_BG=white
+  BULLETTRAIN_TIME_BG=color2
 fi
 if [ ! -n "${BULLETTRAIN_TIME_FG+1}" ]; then
-  BULLETTRAIN_TIME_FG=black
+  BULLETTRAIN_TIME_FG=white
 fi
 
 # CUSTOM
@@ -82,12 +68,12 @@ if [ ! -n "${BULLETTRAIN_CUSTOM_BG+1}" ]; then
   BULLETTRAIN_CUSTOM_BG=black
 fi
 if [ ! -n "${BULLETTRAIN_CUSTOM_FG+1}" ]; then
-  BULLETTRAIN_CUSTOM_FG=default
+  BULLETTRAIN_CUSTOM_FG=white
 fi
 
 # VIRTUALENV
 if [ ! -n "${BULLETTRAIN_VIRTUALENV_BG+1}" ]; then
-  BULLETTRAIN_VIRTUALENV_BG=yellow
+  BULLETTRAIN_VIRTUALENV_BG=color4
 fi
 if [ ! -n "${BULLETTRAIN_VIRTUALENV_FG+1}" ]; then
   BULLETTRAIN_VIRTUALENV_FG=white
@@ -184,10 +170,10 @@ fi
 
 # DIR
 if [ ! -n "${BULLETTRAIN_DIR_BG+1}" ]; then
-  BULLETTRAIN_DIR_BG=blue
+  BULLETTRAIN_DIR_BG=cyan
 fi
 if [ ! -n "${BULLETTRAIN_DIR_FG+1}" ]; then
-  BULLETTRAIN_DIR_FG=white
+  BULLETTRAIN_DIR_FG=black
 fi
 if [ ! -n "${BULLETTRAIN_DIR_CONTEXT_SHOW+1}" ]; then
   BULLETTRAIN_DIR_CONTEXT_SHOW=false
@@ -198,16 +184,16 @@ fi
 
 # GIT
 if [ ! -n "${BULLETTRAIN_GIT_COLORIZE_DIRTY+1}" ]; then
-  BULLETTRAIN_GIT_COLORIZE_DIRTY=false
+  BULLETiTRAIN_GIT_COLORIZE_DIRTY=false
 fi
 if [ ! -n "${BULLETTRAIN_GIT_COLORIZE_DIRTY_FG_COLOR+1}" ]; then
   BULLETTRAIN_GIT_COLORIZE_DIRTY_FG_COLOR=black
 fi
 if [ ! -n "${BULLETTRAIN_GIT_COLORIZE_DIRTY_BG_COLOR+1}" ]; then
-  BULLETTRAIN_GIT_COLORIZE_DIRTY_BG_COLOR=yellow
+  BULLETTRAIN_GIT_COLORIZE_DIRTY_BG_COLOR=green
 fi
 if [ ! -n "${BULLETTRAIN_GIT_BG+1}" ]; then
-  BULLETTRAIN_GIT_BG=white
+  BULLETTRAIN_GIT_BG=green
 fi
 if [ ! -n "${BULLETTRAIN_GIT_FG+1}" ]; then
   BULLETTRAIN_GIT_FG=black
@@ -324,10 +310,10 @@ if [ ! -n "${BULLETTRAIN_EXEC_TIME_ELAPSED+1}" ]; then
   BULLETTRAIN_EXEC_TIME_ELAPSED=5
 fi
 if [ ! -n "${BULLETTRAIN_EXEC_TIME_BG+1}" ]; then
-  BULLETTRAIN_EXEC_TIME_BG=yellow
+  BULLETTRAIN_EXEC_TIME_BG=red
 fi
 if [ ! -n "${BULLETTRAIN_EXEC_TIME_FG+1}" ]; then
-  BULLETTRAIN_EXEC_TIME_FG=black
+  BULLETTRAIN_EXEC_TIME_FG=light-white
 fi
 
 
@@ -694,3 +680,4 @@ PROMPT="$PROMPT"'%{%f%b%k%}$(build_prompt)'
 PROMPT="$PROMPT"'%{${fg_bold[default]}%}'
 [[ $BULLETTRAIN_PROMPT_SEPARATE_LINE == false ]] && PROMPT="$PROMPT "
 PROMPT="$PROMPT"'$(prompt_chars)%{$reset_color%}'
+
