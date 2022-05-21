@@ -26,11 +26,6 @@ together.
 
 For a tmux theme to work with it, I suggest [Maglev](https://github.com/caiogondim/maglev).
 
-## Preview
-
-![Preview](http://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/img/preview.gif)
-
-
 ## Requirements
 
 In order to use the theme, you will first need:
