@@ -41,7 +41,7 @@ In order to use the theme, you will first need:
 
 ### For oh-my-zsh users
 
-1. Download the theme [here](http://raw.github.com/vividsystem/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme)
+1. Download the theme [here](https://raw.githubusercontent.com/vividsystem/bullet-train.zsh/master/bullet-train.zsh-theme)
 
 2. Put the file **bullet-train.zsh-theme** in **$ZSH_CUSTOM/themes/**
 
